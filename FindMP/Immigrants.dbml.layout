@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Immigrants">
+  <DataContextMoniker Name="/ImmigrantsDataContext" />
+  <nestedChildShapes>
+    <classShape Id="2f46c41f-9f62-4349-ab4e-50aa0eebeb40" absoluteBounds="5.125, 3.125, 2, 2.9247054036458331">
+      <DataClassMoniker Name="/ImmigrantsDataContext/MPEMail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="013c3c34-9b07-4a1b-87a0-f22d3a850190" absoluteBounds="5.14, 3.585, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

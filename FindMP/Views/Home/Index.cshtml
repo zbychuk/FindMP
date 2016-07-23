@@ -1,0 +1,100 @@
+﻿@using System.Collections.Specialized
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Send a letter to your MP</h1>
+    <p class="lead">On this page you will be able to send a message to your MP, letting him know how you feel now after unfortunate referendum</p>
+    <p><a href="http://immigrants.help" class="btn btn-primary btn-lg">Go to our main site &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div id="lettertemplate" style="display: none;"></div>
+    <div class="col-md-4">
+        <h2>
+            <label for="yourname">Your name</label>
+        </h2>
+        <p>
+            <input type="text" id="yourname"/>
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h2>
+            <label for="postcode">Postcode</label>
+        </h2>
+        <p>
+            <input type="text" id="postcode"/>
+        </p>
+    </div>
+    <div class="col-md-4" style="display: none" id="mpnamediv">
+        Your MP is: <span id="mpname"></span> (<span id="mpemail"></span>)
+        
+    </div>
+    <div class="col-md-4" style="display: none" id="mptooshort" style="color: red">
+        Your postcode is too short to identify your MP
+    </div>
+
+    <div class="col-md-4">
+        <h2><label for="country">Your country</label>
+        </h2>
+        <p>
+            <select id="country">
+                <option value="Austria">Austria</option>
+                <option value="Belgium">Belgium</option>
+                <option value="Bulgaria">Bulgaria</option>
+                <option value="Croatia">Croatia</option>
+                <option value="Republic of Cyprus">Republic of Cyprus</option>
+                <option value="Czech Republic">Czech Republic</option>
+                <option value="Denmark">Denmark</option>
+                <option value="Estonia">Estonia</option>
+                <option value="Finland">Finland</option>
+                <option value="France">France</option>
+                <option value="Germany">Germany</option>
+                <option value="Greece">Greece</option>
+                <option value="Hungary">Hungary</option>
+                <option value="Ireland">Ireland</option>
+                <option value="Italy">Italy</option>
+                <option value="Latvia">Latvia</option>
+                <option value="Lithuania">Lithuania</option>
+                <option value="Luxembourg">Luxembourg</option>
+                <option value="Malta">Malta</option>
+                <option value="Netherlands">Netherlands</option>
+                <option value="Poland">Poland</option>
+                <option value="Portugal">Portugal</option>
+                <option value="Romania">Romania</option>
+                <option value="Slovakia">Slovakia</option>
+                <option value="Slovenia">Slovenia</option>
+                <option value="Spain">Spain</option>
+                <option value="Sweden">Sweden</option>
+
+            </select>
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h2>
+            <label for="howlong">How many years in UK</label>
+        </h2>
+        <p>
+            <input type="numeric" id="howlong"/>
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h2>
+            <label for="email">Your EMail</label>
+        </h2>
+        <p>
+            <input type="email" id="email"/>
+        </p>
+    </div>
+    <div class="col-md-4"><label><input type="checkbox" id="cbox1" value="first_checkbox"> I have read and accepted <a href="/Home/TC" target="blank">Terms & Conditions</a></label>
+    </div>
+    <div style="clear: both;">
+        <button id="prepareletter" style="display:none">Prepare letter</button>
+        <div id="letter" style="display: none"></div>
+        <button id="sendletter" style="display:none">Send letter to {?}</button>
+    </div>
+</div>
+@section Scripts {
+    <script type="text/javascript" src="/Scripts/HomeIndex.js"></script>
+}
