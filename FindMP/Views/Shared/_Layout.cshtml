@@ -4,49 +4,106 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
+    <!--[if IE]>
+    <![endif]-->
+
+    <link rel='stylesheet' id='author-style-css' href='http://immigrants.help/wp-content/themes/author/style.css?ver=4.5.3' type='text/css' media='all' />
+    <link rel='stylesheet' id='media-queries-css-css' href='http://immigrants.help/wp-content/themes/author/media-queries.css?ver=4.1.2' type='text/css' media='screen' />
+    <link rel='stylesheet' id='author-fontawesome-css-css' href='http://immigrants.help/wp-content/themes/author/includes/fonts/fontawesome/font-awesome.min.css?ver=4.0.3' type='text/css' media='screen' />
+    <link rel='stylesheet' id='google-roboto-css' href='//fonts.googleapis.com/css?family=Roboto%3A300%2C400&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+    <link rel='stylesheet' id='sccss_style-css' href='http://immigrants.help?sccss=1&#038;ver=4.5.3' type='text/css' media='all' />
+    <link rel="stylesheet" type="text/css" href="http://immigrants.help/wp-content/themes/author/includes/styles/ie.css" media="screen" />
+    <link rel="stylesheet" id="custom-css-css" type="text/css" href="http://immigrants.help/?custom-css=1&amp;csblog=1&amp;cscache=6&amp;csrev=256">
+
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     <script type="text/javascript">
-        var appInsights=window.appInsights||function(config){
-            function r(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},u=document,e=window,o="script",s=u.createElement(o),i,f;for(s.src=config.url||"//az416426.vo.msecnd.net/scripts/a/ai.0.js",u.getElementsByTagName(o)[0].parentNode.appendChild(s),t.cookie=u.cookie,t.queue=[],i=["Event","Exception","Metric","PageView","Trace","Ajax"];i.length;)r("track"+i.pop());return r("setAuthenticatedUserContext"),r("clearAuthenticatedUserContext"),config.disableExceptionTracking||(i="onerror",r("_"+i),f=e[i],e[i]=function(config,r,u,e,o){var s=f&&f(config,r,u,e,o);return s!==!0&&t["_"+i](config,r,u,e,o),s}),t
+        var appInsights = window.appInsights || function (config) {
+            function r(config) { t[config] = function () { var i = arguments; t.queue.push(function () { t[config].apply(t, i) }) } } var t = { config: config }, u = document, e = window, o = "script", s = u.createElement(o), i, f; for (s.src = config.url || "//az416426.vo.msecnd.net/scripts/a/ai.0.js", u.getElementsByTagName(o)[0].parentNode.appendChild(s), t.cookie = u.cookie, t.queue = [], i = ["Event", "Exception", "Metric", "PageView", "Trace", "Ajax"]; i.length;) r("track" + i.pop()); return r("setAuthenticatedUserContext"), r("clearAuthenticatedUserContext"), config.disableExceptionTracking || (i = "onerror", r("_" + i), f = e[i], e[i] = function (config, r, u, e, o) { var s = f && f(config, r, u, e, o); return s !== !0 && t["_" + i](config, r, u, e, o), s }), t
         }({
-            instrumentationKey:"3b31d02d-8e60-4d4c-9805-837e012f6f75"
+            instrumentationKey: "3b31d02d-8e60-4d4c-9805-837e012f6f75"
         });
-        
-        window.appInsights=appInsights;
+
+        window.appInsights = appInsights;
         appInsights.trackPageView();
     </script>
 </head>
-<body>
-    @*    <div class="navbar navbar-inverse navbar-fixed-top">*@
-    @*        <div class="container">*@
-    @*            <div class="navbar-header">*@
-    @*                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">*@
-    @*                    <span class="icon-bar"></span>*@
-    @*                    <span class="icon-bar"></span>*@
-    @*                    <span class="icon-bar"></span>*@
-    @*                </button>*@
-    @*                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
-    @*            </div>*@
-    @*            <div class="navbar-collapse collapse">*@
-    @*                <ul class="nav navbar-nav">*@
-    @*                    <li>@Html.ActionLink("Home", "Index", "Home")</li>*@
-    @*                    <li>@Html.ActionLink("About", "About", "Home")</li>*@
-    @*                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
-    @*                </ul>*@
-    @*            </div>*@
-    @*        </div>*@
-    @*    </div>*@
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Immigrants.help</p>
-        </footer>
+<body class="home page page-id-506 page-parent page-template-default">
+
+    <div id="wrapper" class="clearfix">
+        @*    <div class="navbar navbar-inverse navbar-fixed-top">*@
+        @*        <div class="container">*@
+        @*            <div class="navbar-header">*@
+        @*                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">*@
+        @*                    <span class="icon-bar"></span>*@
+        @*                    <span class="icon-bar"></span>*@
+        @*                    <span class="icon-bar"></span>*@
+        @*                </button>*@
+        @*                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
+        @*            </div>*@
+        @*            <div class="navbar-collapse collapse">*@
+        @*                <ul class="nav navbar-nav">*@
+        @*                    <li>@Html.ActionLink("Home", "Index", "Home")</li>*@
+        @*                    <li>@Html.ActionLink("About", "About", "Home")</li>*@
+        @*                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
+        @*                </ul>*@
+        @*            </div>*@
+        @*        </div>*@
+        @*    </div>*@
+
+
+
+        <div id="main" class="clearfix">
+            <div class="header-wrapper clearfix">
+                <div class="header-inside clearfix">
+                    <a class="menu-toggle" href="#"><i class="fa fa-bars"></i></a>
+                    <!-- load the logo -->
+                    <div class="logo-img">
+                        <a href="http://immigrants.help/" title="Immigrants’ Helpline" rel="home"><img class="logo" src="http://immigrants.help/wp-content/uploads/2016/07/logo2logo-orange-H150px.png" alt="Immigrants’ Helpline" /></a>
+                    </div>
+                    <!-- otherwise show the site title and description -->
+
+                    <div class="top-bar">
+                        <div class="menu-wrap">
+                            <div class="menu-main-menu-container">
+                                <ul id="menu-main-menu" class="main-nav clearfix">
+                                    <li id="menu-item-252" class="xlmenuslug--main-menu-en--main-menu-nl--0--0--0--main-menu-es--main-menu-ro--main-menu-de--0--main-menu-bg--main-menu-pl--main-menu-hu menu-item menu-item-type-custom menu-item-object-custom insertion-point menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-55 current_page_item menu-item-252"><a href="http://immigrants.help/home/en_gb/">Home</a></li>
+                                    <li id="menu-item-253" class="xlmenuslug--main-menu-en--main-menu-nl--0--0--0--main-menu-es--main-menu-ro--main-menu-de--0--main-menu-bg--main-menu-pl--main-menu-hu menu-item menu-item-type-custom menu-item-object-custom insertion-point menu-item menu-item-type-post_type menu-item-object-page menu-item-253"><a href="http://immigrants.help/home/en_gb/faq/">Questions &#038; Answers</a></li>
+                                    <li id="menu-item-525" class="xlmenuslug--main-menu-en--main-menu-nl--0--0--0--main-menu-es--main-menu-ro--main-menu-de--0--main-menu-bg--main-menu-pl--main-menu-hu menu-item menu-item-type-custom menu-item-object-custom insertion-point menu-item menu-item-type-post_type menu-item-object-page menu-item-525"><a href="http://immigrants.help/home/en_gb/hate-crime/">Responding to hate crimes</a></li>
+                                    <li id="menu-item-390" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-390"><a href="http://immigrants.help/who-we-are/">About Us</a></li>
+                                    <li id="menu-item-602" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-602"><a href="http://immigrants.help/join-us/">Join Us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div><!-- top bar -->
+                </div><!-- header inside -->
+            </div><!-- header wrapper -->
+
+
+            <div id="content-wrap" class="clearfix">
+                <div id="content">
+                    <div class="post-wrap">
+
+                        <div class="post post-506 page type-page status-publish hentry language-en_gb">
+                            <div class="box">
+                                <div class="frame">
+                                    @RenderBody()
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer id="footer">
+                <p>&copy; @DateTime.Now.Year - Immigrants.help</p>
+            </footer>
+        </div>
+
+
     </div>
 
-     @Scripts.Render("~/bundles/jquery")
-     @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
 </body>
 </html>

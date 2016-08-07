@@ -1,8 +1,8 @@
 ﻿(function ($) {
     var MP = {}, MPEmail;
     var msg ='';
-    $.get('/MPLetter.html').done(function(res) {
-         msg = res;
+    $.get('/MPLetter.html').done(function (res) {
+        msg = '<div id="body-mock">' + res.replace(/^[\s\S]*<body.*?>|<\/body>[\s\S]*$/ig, '') + '</div>';
     });
     
     

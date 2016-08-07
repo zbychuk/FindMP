@@ -3,41 +3,43 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <h1>Send a letter to your MP</h1>
-    <p class="lead">On this page you will be able to send a message to your MP, letting him know how you feel now after unfortunate referendum</p>
-    <p><a href="http://immigrants.help" class="btn btn-primary btn-lg">Go to our main site &raquo;</a></p>
+<div class="title-wrap">
+
+        <h2 class="entry-title">Send a letter to your MP</h2>
+
 </div>
-
-<div class="row">
-    <div id="lettertemplate" style="display: none;"></div>
-    <div class="col-md-4">
-        <h2>
+<div class="post-content">
+    <p>On this page you will be able to send a message to your MP, letting him know how you feel now after unfortunate referendum</p>
+    <p><a href="http://immigrants.help" class="btn btn-primary btn-lg">Go to our main site &raquo;</a></p>
+    
+    <div>
+        <h4>
             <label for="yourname">Your name</label>
-        </h2>
+        </h4>
         <p>
-            <input type="text" id="yourname"/>
+            <input type="text" id="yourname" />
         </p>
     </div>
-    <div class="col-md-4">
-        <h2>
+    <div>
+        <h4>
             <label for="postcode">Postcode</label>
-        </h2>
+        </h4>
         <p>
-            <input type="text" id="postcode"/>
+            <input type="text" id="postcode" />
         </p>
     </div>
-    <div class="col-md-4" style="display: none" id="mpnamediv">
-        Your MP is: <span id="mpname"></span> (<span id="mpemail"></span>)
-        
+    <div style="display: none" id="mpnamediv">
+        <h4>Your MP is</h4> <span id="mpname"></span> (<span id="mpemail"></span>)
+
     </div>
-    <div class="col-md-4" style="display: none" id="mptooshort" style="color: red">
-        Your postcode is too short to identify your MP
+    <div style="display: none;color: red" id="mptooshort">
+        <p>Your postcode is too short to identify your MP</p>
     </div>
 
-    <div class="col-md-4">
-        <h2><label for="country">Your country</label>
-        </h2>
+    <div>
+        <h4>
+            <label for="country">Your country</label>
+        </h4>
         <p>
             <select id="country">
                 <option value="Austria">Austria</option>
@@ -71,23 +73,24 @@
             </select>
         </p>
     </div>
-    <div class="col-md-4">
-        <h2>
+    <div>
+        <h4>
             <label for="howlong">How many years in UK</label>
-        </h2>
+        </h4>
         <p>
-            <input type="numeric" id="howlong"/>
+            <input type="number" id="howlong" />
         </p>
     </div>
-    <div class="col-md-4">
-        <h2>
-            <label for="email">Your EMail</label>
-        </h2>
+    <div>
+        <h4>
+            <label for="email">Your eMail</label>
+        </h4>
         <p>
-            <input type="email" id="email"/>
+            <input type="email" id="email" />
         </p>
     </div>
-    <div class="col-md-4"><label><input type="checkbox" id="cbox1" value="first_checkbox"> I have read and accepted <a href="/Home/TC" target="blank">Terms & Conditions</a></label>
+    <div>
+        <label><input type="checkbox" id="cbox1" value="first_checkbox">I have read and accepted <a href="/Home/TC" target="blank">Terms & Conditions</a></label>
     </div>
     <div style="clear: both;">
         <button id="prepareletter" style="display:none">Prepare letter</button>
@@ -95,6 +98,7 @@
         <button id="sendletter" style="display:none">Send letter to {?}</button>
     </div>
 </div>
+
 @section Scripts {
     <script type="text/javascript" src="/Scripts/HomeIndex.js"></script>
 }
