@@ -34,6 +34,10 @@ namespace FindMP.Controllers
         {
             var uid = Guid.Parse(id);
             LetterData data = new LetterData(uid);
+            var ctx = new ImmigrantsDataContext();
+            var r = ctx.MPEMails.FirstOrDefault(d => d.UniqueId == uid);
+            r.Confirmed = true;
+            ctx.SubmitChanges();
             SendEmailFromData(data);
             return View();
         }
@@ -65,8 +69,8 @@ namespace FindMP.Controllers
             var smtp = new SmtpClient("localhost");
             MailMessage message = new MailMessage
             {
-                Subject = $"Your request to send letter to your MP ({data.MP})",
-                Body = "<p>This email has been generated because you attempted to send an email to your MP from appel.immigrants.help.</p>"+
+                Subject = $"Your request to write to your MP ({data.MP})",
+                Body = "<p>This email has been generated because you attempted to send an email to your MP from appeal.immigrants.help.</p>"+
                 "<p>Before we can proceed with your request, we need you to confirm that you intended to send the email by clicking on the link below:</p>"+
                 link+
                 "<p>Thank you for voicing your concerns. It is important that we understand the views of our representatives on issues of importance to us.</p>"+
@@ -76,7 +80,7 @@ namespace FindMP.Controllers
                 IsBodyHtml = true
             };
             message.To.Add(to);
-            message.CC.Add("info@immigrants.help");
+            //message.CC.Add("info@immigrants.help");
             
 
             smtp.Send(message);
@@ -86,7 +90,7 @@ namespace FindMP.Controllers
         private static void SendEmailFromData(LetterData data)
         {
             var to = data.MPEmail;
-            to = "zbych+test@controtex.com";
+            //to = "zbych+test@controtex.com";
             var smtp = new SmtpClient("localhost");
             MailMessage message = new MailMessage
             {
@@ -96,7 +100,7 @@ namespace FindMP.Controllers
                 IsBodyHtml = true
             };
             message.To.Add(to);
-            message.CC.Add("info@immigrants.help");
+            message.CC.Add("contact@immigrants.help");
             message.CC.Add(data.Email);
 
             smtp.Send(message);

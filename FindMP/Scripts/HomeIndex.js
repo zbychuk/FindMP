@@ -75,7 +75,7 @@
                 })
             .done(function(r) {
                     if (r && r.success) {
-                        alert('You will receive an email from us soon. You have to click on confirm in this email');
+                        alert('You will receive an e-mail from us soon. You will need to click on the link in this e-mail to confirm your e-mail address. Please check your junk folder if you don\'t see the e-mail within a few minutes.');
                         window.location.href = 'http://immigrants.help';
                     } else {
                         alert('There was an error while sending. Please try again.');
@@ -95,7 +95,7 @@
                     var mpName = MP.DisplayAs;
                     $('#mptooshort').hide();
                     $('#mpname').text(mpName);
-                    $('#sendletter').text('Send letter to ' + mpName).show();
+                    $('#sendletter').text('Send e-mail to ' + mpName).show();
                     var ad = MP.Addresses.Address.length ? MP.Addresses.Address : [MP.Addresses.Address];
                     MPEmail = '';
                     for (var i = 0; i < ad.length; i++) {
